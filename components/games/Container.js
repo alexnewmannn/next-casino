@@ -12,8 +12,8 @@ const container = css({
 export default class extends Component {
   getAlbums() {
     const items = this.props.data.albums.items;
-    return items.map(album => {
-      return <Game album={album} key={album.id} />
+    return items.map((album, id) => {
+      return <Game album={album} key={id} />
     });
   }
 

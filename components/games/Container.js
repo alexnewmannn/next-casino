@@ -12,19 +12,16 @@ const container = css({
 export default class extends Component {
   getAlbums() {
     const items = this.props.data.albums.items;
-    const Games = [];
-    for (const album of items) {
-      Games.push(<Game album={album} key={album.id} />);
-    }
-
-    return Games;
+    return items.map(album => {
+      return <Game album={album} key={album.id} />
+    });
   }
 
   render() {
     const Games = this.getAlbums();
     return(
       <games-container class={container}>
-        {this.getAlbums()}
+        {Games}
       </games-container>
     )
   }

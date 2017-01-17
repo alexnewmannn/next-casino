@@ -1,20 +1,30 @@
 import { Component } from 'react';
 import InlineSVG from 'react-inlinesvg';
+import variables from '../utilities/variables.js';
+import css from 'next/css';
+
+const header = css({
+  background: variables.secondaryColor,
+  borderBottom: '3px solid #fff'
+});
+
+const headerWrapper = css({
+  margin: 'auto',
+  display: 'flex',
+  justifyContent: 'space-between',
+  maxWidth: '120rem',
+  padding: '1rem 0'
+});
 
 export default class extends Component {
   render() {
     return (
-      <header>
-        <header-wrapper>
-          <style jsx>{`
+      <header className={header}>
+        <header-wrapper class={headerWrapper}>
+          <style>{`
             svg { width: 20rem; }
-            header-wrapper {
-              margin: auto; display: flex; justify-content: space-between;
-              max-width: 120rem; padding: 1rem 0;
-            }
-            header { background: #4F2EB7; border-bottom: 3px solid white;}
           `}</style>
-          <InlineSVG style="background: red" src={"../static/icon.svg"} />
+          <InlineSVG src={"../static/icon.svg"} />
         </header-wrapper>
       </header>
     )

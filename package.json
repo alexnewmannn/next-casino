@@ -4,12 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "next"
+    "dev": "next",
+    "scss": "node-sass -w **/index.scss -o static"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "next": "^1.2.3",
+    "next": "beta",
+    "node-sass": "^4.3.0",
     "react-inlinesvg": "^0.5.5"
   }
 }

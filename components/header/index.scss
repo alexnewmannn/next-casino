@@ -1,0 +1,14 @@
+@import 'utilities/variables';
+
+header {
+  background: $secondary-color;
+  border-bottom: 3px solid #fff;
+
+  &-wrapper {
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      max-width: 120rem;
+      padding: 1rem 0;
+  }
+}

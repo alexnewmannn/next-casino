@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import Head from 'next/head'
-import Header from '../components/Header.js';
-import variables from '../utilities/variables.js';
+import Header from '../../components/header/index.js';
 
 export default ({ children, title = 'This is the default title' }) => (
   <site-content>

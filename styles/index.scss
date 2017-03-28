@@ -1,2 +1,6 @@
 /* Components */
-@import 'components/layout';
+@import '../utilities/typography.scss';
+
+@import '../components/layout/index';
+@import '../components/header/index';
+@import '../components/games/container/index';
